@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Pomodoro App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color:black;
+            }
+		h1{
+	       position:relative;
+          text-align:center;
+            color:white
+		  }
+		  .container{
+		  	position:relative;
+		  	width:50%;
+              border-style:none;
+              border-color:white;
+              border width = thick;
+		  }
+		  .container #clicker{
+		  	position:absolute;
+		  	color:white;
+		  	background-image: url(img/waffle.jpg);
+        	background-position:center;
+        	transform:translate(-50%, 50%);
+        	-ms-transform: translate(-50%, 50%);
+        	top:50%;
+        	left:25%;
+        	font-size:16px;
+        	padding:12px 24px;
+        	border-style: none;
+              border-color:white;
+        	cursor: pointer;
+        	border-radius 5px;
+        	}
+        	.container #stopper{
+		  	position:absolute;
+		  	color:white;
+		  	background-image: url(img/waffle.jpg);
+        	background-position:center;
+        	transform:translate(-50%, 50%);
+        	-ms-transform: translate(-50%, 50%);
+        	top:50%;
+        	left:50%;
+        	font-size:16px;
+        	padding:12px 24px;
+        	border-style: none;
+              border-color:white;
+        	cursor: pointer;
+        	border-radius 5px;
+        	}
+            
+            .container #reset{
+		  	position:absolute;
+		  	color:white;
+		  	background-image: url(img/waffle.jpg);
+        	background-position:center;
+        	transform:translate(-50%, 50%);
+        	-ms-transform: translate(-50%, 50%);
+        	top:50%;
+        	left:75%;
+        	font-size:16px;
+        	padding:12px 24px;
+        	border-style: none;
+              border-color:white;
+        	cursor: pointer;
+        	border-radius 5px;
+        	}
+        	.container img {
+			  width: 120%;	
+			  height: 120%;
+			}
+		  
+            .container #countdown
+            {
+                color:white;
+                position: absolute;
+                text-align: center;
+                font-size:100px;
+                left:0;
+                top:25%;
+                width:100%;
+            }
+            
+            
+        </style>
+        
+        
+    </head>
+    <body>
+    
+    <h1>Pomodoro</h1>
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="Work.html">Work</a></li>
+                <li><a href="About.html">About</a></li>
+               
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    <span id="countdown">10</span>
+    <img src="img/gir2.jpg">
+    <button id="clicker" onClick="myTimer = setInterval(myCounter, 1000)">Start</button>
+    <button id="stopper" onClick="clearInterval(myTimer)">Stop</button>
+        <button id="reset" onClick="re_time()">Reset</button>
+    </div>
+
+    <script>
+    // 1. Find and store the element we want to listen to events on.
+    var clickerbutton= document.getElementById("clicker");
+         var countdown= document.getElementById("countdown");
+         var stopbutton=document.getElementById("stopper");
+        
+ 
+
+    // 2. Define the function that will respond to the event.
+ /*   function buttonclick(){
+    	//clickerbutton.textContent = "stop";
+        
+      var timer = window.setInterval(ticker,1000);
+
+    }
+   
+        
+        
+    // 3. Add the event listener for the element and function
+ 
+  
+    
+        
+              
+
+   
+       */
+ 
+
+  
+function myCounter()
+        {   
+            var timeclock= parseInt(countdown.textContent);
+            countdown.innerHTML=timeclock-1;
+        }
+function re_time()
+        {
+            countdown.textContent=10;
+        }
+        
+    </script>
+        
+    
+        
+    </body>
+</html>
