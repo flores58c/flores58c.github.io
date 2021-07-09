@@ -1,0 +1,75 @@
+.jumbotron{
+  background-size: auto auto;
+  background-image:url("/img/bricks.png");
+  background-repeat: repeat;
+background-color: black;
+animation: leftRight 300s linear infinite;
+
+
+}
+#title{
+font-family: 'Play', sans-serif;
+margin:0px;
+
+
+}
+
+
+#pictureDiv{
+  background-color: black;
+  color:white;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+body{
+  background-color: black;
+}
+
+img{
+  border-radius: 8px;
+
+
+}
+
+@keyframes leftRight {
+  from {
+    background-position:  0px ;
+  }
+  to {
+    background-position: 10000px;
+  }
+}
+
+#reset{
+  opacity: 0.9;
+  background-color:red;
+  color:silver;
+  border-color:silver;
+
+}
+
+
+/* The animation code */
+@keyframes slide {
+  from {
+    left:  -250px ;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+#caption{
+  position: relative;
+  animation:slide 3s;
+   animation-timing-function: ease-in;
+
+}
+
+/* making the website responsive for phone */
+@media only screen and (max-width: 768px) {
+ img{
+    width: 100%;
+  }
+}

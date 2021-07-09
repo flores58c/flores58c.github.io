@@ -1,0 +1,63 @@
+header, main , h1, nav, footer{
+  text-align:center;
+}
+
+h1{
+  /* color code for maroon */
+  color:#AE0000;
+ font-family: 'Press Start 2P', cursive;
+}
+
+nav a{
+padding:5px;
+padding-bottom:4px;
+font-size:1.2em;
+font-decoration:none;
+color:white;
+/*background-color:aqua;*/
+}
+
+nav a:hover{
+  border-bottom: 2px #AE0000 solid;
+  font-size: 1.5em;
+  transition: .25s;
+}
+
+main{
+  display:flex;
+  justify-content: center;
+}
+
+figure{
+  justify-content: right;
+}
+
+table{
+  margin : 0px auto;
+  background-color:#AE0000;
+  color:white;
+}
+body{
+  background-color: black;
+}
+p ,h3, h5 ,ul,ol,strong{
+  color:white;
+}
+
+.pFoot{
+  color:blueviolet;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+ img{
+   height:500px;
+    width: 100%;
+  }
+
+  div>img{
+    height:500px;
+     width: 100%;
+   }
+}
